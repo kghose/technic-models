@@ -23,6 +23,12 @@ decrease vertical thrust, moving the helicopter up or down. This is called the
 By setting the pitch of each blade differently we can change the direction of
 the thrust, moving the helicopter horizontally. This is called the **cyclic**
 
+> NOTE: Gyroscopic Precession
+> The thrust on the rotor acts on the helicopter with a 90 degree lag.
+> See this video for an explanation: https://www.youtube.com/watch?v=MH1emIx5Ubs .
+> For this reason the input from the cyclic stick has to be phase shifted by 90
+> degrees. More on this later.
+
 There are two interesting problems here: 
 1. How to adjust the pitch of the blades as they rotate through a full cycle,
    since the pitch of each blade under cyclic input has to depend on where it is
@@ -58,7 +64,7 @@ Bell, so I modeled the Bell.
 
 ### Cyclic control
 
-- Diagram of cyclic control from Bell 206 manual
+![](cyclic-control.png)
 
 - Corresponding part of model
 
@@ -67,6 +73,9 @@ nice person on aviation stack exchange helped me out][aviation-stack-1].
 
 [aviation-stack-1]:
     https://aviation.stackexchange.com/questions/91631/how-does-this-bell-206-cyclic-control-linkage-work
+
+![](cyclic-control-exploded.png)
+
 
 ### Collective control
 
@@ -85,14 +94,40 @@ experimentation to replicate the functionality.
 
 - Corresponding part of model
 
+### 90 degree phase shift of swashplate motion
 
+Cyclic inputs are transferred to the swashplate with a 90 degree phase shift to
+account for gyroscopic precession.
 
-## Post-script: Helicopters in the computer age
+So, for American rotorcraft, like the Bell 206, whose blades turn
+counter-clockwise, a forward motion on the stick needs to increase pitch on the
+left blade (and decrease on the right), so that the thrust vector, after
+gyroscopic precession, points forwards. (More pitch on left -> more thrust 90
+degrees later, at the back).
 
-There are current attempts to replace the mechanical swashplate with servo
-motors on each blade that would electronically adjust the pitch of the blades.
-This would reduce mechanical complexity (and insert new points of failure, IMO)
-but I'm guessing this can make the helicopter lighter and perhaps more agile?
+I made the mistake of assuming that this meant that the _swashplate_ motion
+_had_ to be 90 degree out of phase. I had seen a few educational videos where it
+looked like the linkage directly moved the blade right above it.
+
+I studied the Bell 206 manual until my eyes bled and I could not figure out
+where the 90 degree shift was ocurring. It seemed that a forward motion of the
+stick would result in a front back motion of the swashplate, with no phase shift
+offered by the rigging. 
+
+This stumped me for several days until, as I typed up a question on
+aviation.stackexchange, staring at the Bell 206 manual, I suddenly got it.
+
+The phase shift is done by the pitch links.
+
+![](bell206-pitch-link-phase.png)
+
+The pitch links are 90 degrees offset from the blade they control. This
+mechanism is at the same time so simple, obvious and elegant that I
+metaphorically banged my head on the table, especially since I had spent about
+half an hour coming up with ad hoc mechanisms for shifting the phase for my LEGO
+model, having decided to completely abandon the Bell 206 as a basis.
+
+Thankfully, I figured it out before I went too far.
 
 ## Other LEGO helicopter models with cyclic/collcetive
 
@@ -120,11 +155,10 @@ mechanisms are completely or partially obscured.
   mechanism is hard to see.
 - [cyclic/collective rigging
   diagram](https://www.eurobricks.com/forum/index.php?/forums/topic/156205-moc-calypso-hughes-269b300-helicopter/&do=findComment&comment=2888754)
-- Nice discussions
-  [1](https://www.eurobricks.com/forum/index.php?/forums/topic/156205-moc-calypso-hughes-269b300-helicopter/)
+- [1](https://www.eurobricks.com/forum/index.php?/forums/topic/156205-moc-calypso-hughes-269b300-helicopter/)
   and
   [2](https://www.eurobricks.com/forum/index.php?/forums/topic/60459-effes-moc-corner/&page=24)
-  on mixing levers on EuroBricks.
+  Nice discussions on mixing levers on EuroBricks.
 
 
 ## References
@@ -133,3 +167,10 @@ mechanisms are completely or partially obscured.
 - [Bell 206 mixing lever video](https://www.youtube.com/watch?v=cVNBC9EDOcU)
 - [Robinson R22
   manual](https://robinsonheli.com/wp-content/uploads/2020/11/r22_mm_8.pdf)
+
+## Post-script: Helicopters in the computer age
+
+There are current attempts to replace the mechanical swashplate with servo
+motors on each blade that would electronically adjust the pitch of the blades.
+This would reduce mechanical complexity (and insert new points of failure, IMO)
+but I'm guessing this can make the helicopter lighter and perhaps more agile?
