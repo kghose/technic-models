@@ -1,4 +1,4 @@
-# Bell 206 Cyclic/Collective controls, rigging and swash-plate
+# Helicopter cyclic/collective controls, rigging and swash-plate
 
 Photo of model
 
