@@ -44,6 +44,21 @@ These problems are solved by the **swashplate**.
 
 - Corresponding part of model
 
+### Constraining swashplate motion
+
+All real designs that I studied use a ball-joint to constrain the motion of the
+swashplate. 
+
+
+
+A key issue, it turns out, in the LEGO construction is constraining the
+swashplate motion. 
+
+### Remote rotations
+
+
+
+
 ## Rigging
 
 While researching this topic I became fascinated not only by swashplate, but by
@@ -136,6 +151,12 @@ so that the principle of operation can be studied. The other models listed here
 aim at creating a playable helicopter model with functioning controls, so the
 mechanisms are completely or partially obscured.
 
+- [Fredrick Glockner's
+  model](http://lego-technique.blogspot.com/2013/02/helicopter-rotor-with-cyclic-control.html).
+  This is just the swashplate with no rigging. While the construction is very
+  intricate and does a lot in a small space, the mechanism that constrains the
+  swashplate is kludgy and relies on the give that the plastic parts have, to
+  work. There does not seem to be affordance for the collective.
 - [Lama Helicopter](https://www.youtube.com/watch?v=8U2VM3m6Ypc). It has working
   collective, cyclic and tail rotor controls beautifully compressed to scale,
   and it's been motorized. Some of the build is not reqular LEGO. There is a
@@ -153,6 +174,7 @@ mechanisms are completely or partially obscured.
   This is a coaxial helicopter, two rotors on top of each other, and the model
   shows how a swashplate works in this case, which is excellent. Again, the
   mechanism is hard to see.
+- [Steph77's UH-1 Huey](https://www.eurobricks.com/forum/index.php?/forums/topic/68431-mountain-rescue-uh-1-huey/)  
 - [cyclic/collective rigging
   diagram](https://www.eurobricks.com/forum/index.php?/forums/topic/156205-moc-calypso-hughes-269b300-helicopter/&do=findComment&comment=2888754)
 - [1](https://www.eurobricks.com/forum/index.php?/forums/topic/156205-moc-calypso-hughes-269b300-helicopter/)
