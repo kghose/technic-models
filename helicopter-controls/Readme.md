@@ -257,6 +257,12 @@ so that the principle of operation can be studied. The other models listed here
 aim at creating a playable helicopter model with functioning controls, so the
 mechanisms are completely or partially obscured.
 
+- [Jonathan Warner's Swashplate and Gearbox
+  model](https://www.eurobricks.com/forum/index.php?/profile/179518-jwarner/content/&type=forums_topic_post).
+  [Video](https://www.youtube.com/watch?v=ZhGFicWf2TA). It looks the closest to
+  my gimbal/cradle design: it pays attention to the center of rotation and how
+  to constrain it without kludging things. It employs a very robust construction
+  which, unfortunately, obscures the internals.
 - [Fredrick Glockner's
   model](http://lego-technique.blogspot.com/2013/02/helicopter-rotor-with-cyclic-control.html).
   This is just the swashplate with no rigging. While the construction is very
@@ -293,4 +299,3 @@ mechanisms are completely or partially obscured.
   and
   [2](https://www.eurobricks.com/forum/index.php?/forums/topic/60459-effes-moc-corner/&page=24)
   Nice discussions on mixing levers on EuroBricks.
-
