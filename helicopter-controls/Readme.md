@@ -6,6 +6,10 @@ Link to model file
 
 Demo video
 
+- [Stud.io file](bell206-2022.03.07-pivot-sleeve.io)
+- [Instructions](bell206-2022.03.07-instructions.pdf)
+
+
 ## Cyclic? Collective? How helicopters maneuver.
   
 For a good introduction to how helicopters fly and the function of the
@@ -110,31 +114,19 @@ but I'm guessing this can make the helicopter lighter and perhaps more agile?
 - [Robinson R22
   manual](https://robinsonheli.com/wp-content/uploads/2020/11/r22_mm_8.pdf)
 
-# Appendix: Personal notes
-
-This was as much and more fun than I hoped for. I learned something about how
-helicopters fly. I banged my head against interesting mechanical problems. I got
-to work with my hands, and it was a fun puzzle to design everything with as few
-parts and in as little space as possible.
-
-I'm also a convert to the studless design of modern Technic. I was initially a
-deep skeptic, but I really appreciate how the studless design makes lift arms
-symmetric, and I really like the rounded ends of lift arms.
-
-I'm still learning how to economically attach beams perpendicularly together,
-but I'll get there.
 
 # Appendix: Swashplate support design
 
-## Constraining swashplate motion
+We want the swashplate to tilt left-right and forward-backward, centered about
+the point the rotor mast passes through it.
 
-The swashplate's desired motion is that of a disc that can tilt freely in any
-direction, pivoted at it's center, which is also the point the rotor mast passes
-through. 
+A swashplate supported only by the control and pitch links would slide about,
+twist and tilt in undesirable directions. This is because the links need many
+degrees of freedom and are insufficient to constrain the plate. (This is best
+understood by building the physical model yourself.)
 
-If the swashplate was held in place only by the control and pitch links its
-center would drift about. This is because the links need so many degrees of
-freedom. This is best understood by building the physical model yourself.
+
+## Pivot Sleeve: Constraining swashplate motion I
 
 All real helicopter designs that I studied use a specialized structure called a
 pivot sleeve to solve this issue. The pivot sleeve constrains the swashplate to
@@ -143,6 +135,27 @@ move over part of a spherical surface, satisfying our requirement.
 These are diagrams from the Bell 206 manual as an example.
 
 - Diagrams
+
+(I only recognized the importance of the pivot sleeve after building the first
+iteration of the model. The plate was supported only by the control links and it
+slid about everywhere.)
+
+## Vertical guide: Constraining swashplate motion I
+
+The spherical surface of the pivot sleeve is still not enough to completely
+constrain the plate as we wish. The sleeve prevents the plate from sliding away,
+but the plate can still twist, preventing proper
+
+
+
+(In my -- what I thought was -- final design, I discovered the twisting problem.
+I decided the issue could be solved by constraining the motion of one half of
+the control links. This was kludgy and unsatisfactory. By happy accident I
+discovered the vertical guide in the Bell 206 pivot sleeve and then noticed the
+external vertical guide in the Bell 407 support.)
+
+
+## Other LEGO models 
 
 Steph77's helicopters (e.g. the [AW
 169](https://rebrickable.com/mocs/MOC-12600/Ivan_M/aw-169-helicopter/#details))
@@ -154,6 +167,8 @@ to support the swashplate (created from
 This design puzzles me because the ball can not change vertical height on the
 mast, so it prevents collective input, or, the ball is not always supported by
 the plate.
+
+The other motions are constrained by restricting the control 
 
 I was unable to find a combination of LEGO parts to model such a specially
 shaped sleeve to my staisfaction and had to settle for mimicking the function
@@ -179,8 +194,35 @@ I finally arrived at a design that used the
 
 
 
-## Remote rotations
+## Centers of rotation are important
 
+It is important to have all the rod/link attachments happen at the plane/axis
+of rotation.
+
+1. The control rods that drive the swashplate need to attach on a plane that
+   passes through the center of rotation
+2. The scissor link should pivot at the point it touches the swashplate, and
+   the axis of rotation has to go through the center of rotation of the pivot
+   sleeve.
+
+If these centers are not aligned, when the swashplate tilts off-axis links have
+a lateral motion on top of rotational motion, and this causes links to seize up.
+
+Even in the Bell 206, we can see that the protuberances (called horns) of the
+lower swashplate bend upwards where the control rods are connected. i suspect
+this is to bring the attachment points in the same plane as the center of
+rotation of the pivot sleeve.
+
+
+
+
+## Swashplate control rod constraints
+
+The swashplate control rods need some degree of freedom, but not to much. If too
+much is given, by using ball joints on either end, there is too much play and
+the swashplate lolls about loosely. I solved this by strongly constraining the
+lever side of the control rods - instead of ball joints, I use friction bushings
+to restrict the sideways play of one end of the rods.
 
 
 
@@ -299,3 +341,17 @@ mechanisms are completely or partially obscured.
   and
   [2](https://www.eurobricks.com/forum/index.php?/forums/topic/60459-effes-moc-corner/&page=24)
   Nice discussions on mixing levers on EuroBricks.
+
+# Appendix: Personal notes
+
+This was as much and more fun than I hoped for. I learned something about how
+helicopters fly. I banged my head against interesting mechanical problems. I got
+to work with my hands, and it was a fun puzzle to design everything with as few
+parts and in as little space as possible.
+
+I'm also a convert to the studless design of modern Technic. I was initially a
+deep skeptic, but I really appreciate how the studless design makes lift arms
+symmetric, and I really like the rounded ends of lift arms.
+
+I'm still learning how to economically attach beams perpendicularly together,
+but I'll get there.
