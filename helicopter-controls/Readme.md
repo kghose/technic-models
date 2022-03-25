@@ -46,7 +46,7 @@ swashplate.
 # Model overview
 
 | Bell 206 rigging | Model |
-----------------------------
+| --- | --- |
 | ![](media/bell206-manual-complete-rigging.png#300) | ![](media/bell206-2022.03-essential-rigging.png#300) |
 
 
