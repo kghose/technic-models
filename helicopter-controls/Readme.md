@@ -1,11 +1,9 @@
 # Helicopter cyclic/collective controls, rigging and swash-plate
 
-Photo of model
 
-Link to model file
+![](media/bell206-2022.03-photo.jpg)
 
-Demo video
-
+- [Demo video](https://youtu.be/AFvBazurowA)
 - [Stud.io file](bell206-2022.03.07-pivot-sleeve.io)
 - [Instructions](bell206-2022.03.07-instructions.pdf)
 
@@ -44,6 +42,13 @@ There are two interesting problems here:
 The **swashplate** solves these problems. Here is a
 [video](https://www.youtube.com/watch?v=R2inFdHqXj4) of operation of a Bell 206
 swashplate. 
+
+# Model overview
+
+| Bell 206 rigging | Model |
+----------------------------
+| ![](media/bell206-manual-complete-rigging.png#300) | ![](media/bell206-2022.03-essential-rigging.png#300) |
+
 
 ## Swashplate
 
