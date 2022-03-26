@@ -6,7 +6,7 @@ see how things work.
 
 ## [Helicopter Flight Controls](helicopter-controls/)
 
-<img src="media/bell206-2022.03-photo.jpg" width="300">
+<img src="helicopter-controls/media/bell206-2022.03-photo.jpg" width="300">
 
 [Demo video](https://youtu.be/AFvBazurowA)
 
