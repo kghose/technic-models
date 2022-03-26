@@ -19,6 +19,7 @@ see how things work.
 
 ## Charles Babbage Difference Engine
 
+## Chinook (tandem) helicopter flight controls
 
 ## Techninc building references
 - https://community.legoeducation.com/blogs/31/74

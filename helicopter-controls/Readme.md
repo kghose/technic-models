@@ -1,7 +1,8 @@
 # Helicopter cyclic/collective controls, rigging and swash-plate
 
+<video><source src="https://youtu.be/AFvBazurowA"></video>
 
-![](media/bell206-2022.03-photo.jpg)
+<img src="media/bell206-2022.03-photo.jpg" width="300">
 
 - [Demo video](https://youtu.be/AFvBazurowA)
 - [Stud.io file](bell206-2022.03.07-pivot-sleeve.io)
@@ -45,51 +46,18 @@ swashplate.
 
 # Model overview
 
-| Bell 206 rigging | Model |
+| Bell 206  | Model |
 | --- | --- |
-| ![](media/bell206-manual-complete-rigging.png#300) | ![](media/bell206-2022.03-essential-rigging.png#300) |
+| ![](images/bell206-manual-essential-rigging.png) | ![](images/model-essential-rigging.png) |
 
 
-## Swashplate
+| Bell 206 (detail) | Model |
+| --- | --- |
+| ![](images/bell206-manual-cyclic-control-and-rigging.jpg) | ![](images/model-essential-rigging.png) |
 
-- Diagram of swashplate from Bell 206 manual
-
-- Corresponding part of model
-
-## Rigging
-
-While researching this topic I became fascinated not only by swashplate, but by
-the mechanisms that convert a pilot's cyclic and collective inputs to swashplate
-angles (the **rigging**), so I modeled that too.
-
-- Overview diagram from manual
-
-### Cyclic control
-
-![](cyclic-control.png)
-
-- Corresponding part of model
-
-
-
-### Collective control
-
-- Diagram of cyclic control from Bell 206 manual
-
-- Corresponding part of model
-
-### Mixing lever/bell crank
-
-- Diagram of mixing lever from Bell 206 manual
-
-Here is a [video](https://www.youtube.com/watch?v=cVNBC9EDOcU) of the Bell 206
-mixing crank in operation. 
-
-The design of the part is pretty deliberate, and it took me a lot of
-experimentation to replicate the functionality.
-
-- Corresponding part of model
-
+> **Note:** While researching this topic I became fascinated not only by
+> swashplate, but by the mechanisms that convert a pilot's cyclic and collective
+> inputs to swashplate angles (the **rigging**), so I modeled that too.
 
 > **Note:** The Bell 206 has a servo section between the mixing lever and the
 > swashplate that I did not model. The servo section does not add anything
@@ -104,6 +72,45 @@ experimentation to replicate the functionality.
 > from the mixing crank) and before the swashplate. I have not included these
 > because they add clutter and don't add anything to the educational value of
 > the model.
+
+## Cyclic control
+
+| Bell 206 | Model |
+| --- | --- |
+| ![](images/bell206-manual-cyclic-control-and-rigging.jpg) | ![](images/model-cyclic-control-and-rigging.png) |
+
+
+## Collective control
+
+| Bell 206 | Model |
+| --- | --- |
+| ![](images/bell206-manual-collective-control-and-rigging.jpg) | ![](images/model-collective-control-and-rigging.png) |
+
+
+## Mixing lever/bell crank
+
+Helicopters need a mixing crank (or lever) to additively combine the collective
+and cyclic inputs. I found the Bell 206 mixing lever quite ingenious.
+Here is a [video](https://www.youtube.com/watch?v=cVNBC9EDOcU) of the Bell 206
+mixing crank in operation. 
+
+The design of the part is pretty deliberate, and it took me some
+experimentation to replicate the functionality.
+
+| Bell 206 cyclic | Bell 206 collective | Model |
+| --- | --- | --- |
+| ![](images/bell206-manual-mixing-lever-1.png) | ![](images/bell206-manual-mixing-lever-2.png) | ![](images/model-mixing-lever.png) |
+
+
+## Swashplate
+
+The swashplate was a pretty tough thing to work out in all its detail, as
+simple as it looks. There is a section in the appendix below devoted to it.
+
+| Bell 206 | Model |
+| --- | --- |
+| ![](images/bell206-manual-swashplate.png) | ![](images/model-swashplate.png) |
+
 
 # Post-script: Helicopters in the computer age
 
@@ -137,20 +144,32 @@ All real helicopter designs that I studied use a specialized structure called a
 pivot sleeve to solve this issue. The pivot sleeve constrains the swashplate to
 move over part of a spherical surface, satisfying our requirement.
 
-These are diagrams from the Bell 206 manual as an example.
-
-- Diagrams
+This is the pivot sleeve from a Bell 206:
+![](images/bell206-photo-pivot-sleeve-slot.jpeg)
 
 (I only recognized the importance of the pivot sleeve after building the first
 iteration of the model. The plate was supported only by the control links and it
 slid about everywhere.)
 
-## Vertical guide: Constraining swashplate motion I
+## Vertical guide: Constraining swashplate motion II
 
-The spherical surface of the pivot sleeve is still not enough to completely
+The spherical surface of the pivot sleeve is still not sufficient to completely
 constrain the plate as we wish. The sleeve prevents the plate from sliding away,
-but the plate can still twist, preventing proper
+but the plate can still twist.
 
+The Bell 206 sleeve has vertical guides (the slots in the ball you see above).
+The non-rotating swashplate (image below) has bolts that ensure it moves along
+the guides, preventing twisting.
+
+![](images/bell206-photo-stationary-swashplate.jpeg)
+
+In my model, I could not model this exact method and chose instead to use a
+scissor link like that used by the Bell 407 to prevent twisting of the
+non-rotating swashplate.
+
+| Bell 407 | Model |
+| --- | --- |
+| ![](images/bell407-photo-swashplate.jpeg) | ![](images/model-swashplate.png) |
 
 
 (In my -- what I thought was -- final design, I discovered the twisting problem.
@@ -159,47 +178,7 @@ the control links. This was kludgy and unsatisfactory. By happy accident I
 discovered the vertical guide in the Bell 206 pivot sleeve and then noticed the
 external vertical guide in the Bell 407 support.)
 
-
-## Other LEGO models 
-
-Steph77's helicopters (e.g. the [AW
-169](https://rebrickable.com/mocs/MOC-12600/Ivan_M/aw-169-helicopter/#details))
-use a [gear ball with grooves
-(2907)](https://www.brickowl.com/catalog/lego-technic-gear-ball-with-grooves-2907)
-to support the swashplate (created from
-[2908](https://www.brickowl.com/catalog/lego-rotor-holder-2908) and
-[2906](https://www.brickowl.com/catalog/lego-technic-rotor-4-blade-7-diameter-2906)).
-This design puzzles me because the ball can not change vertical height on the
-mast, so it prevents collective input, or, the ball is not always supported by
-the plate.
-
-The other motions are constrained by restricting the control 
-
-I was unable to find a combination of LEGO parts to model such a specially
-shaped sleeve to my staisfaction and had to settle for mimicking the function
-with a gimbal instead. 
-
-## Swashplate gimbal to mimic pivot sleeve
-
-I created some initial designs with the gimbal mechanism at the center of the
-swashplate, with the mast going through the center. I found these decently
-clever, but decided they were making the swashplate very large and heavy.
-
-These designs also required a duplication of the gimbal mechanism for both top
-and bottom swashplates since I could no longer use the turntable part.
-
-- Diagrams of earlier efforts
-
-I finally arrived at a design that used the 
-
-
-
 ## The center of rotation should be the upper (rotating) plate
-
-
-
-
-## Centers of rotation are important
 
 It is important to have all the rod/link attachments happen at the plane/axis
 of rotation.
@@ -217,18 +196,6 @@ Even in the Bell 206, we can see that the protuberances (called horns) of the
 lower swashplate bend upwards where the control rods are connected. i suspect
 this is to bring the attachment points in the same plane as the center of
 rotation of the pivot sleeve.
-
-
-
-
-## Swashplate control rod constraints
-
-The swashplate control rods need some degree of freedom, but not to much. If too
-much is given, by using ball joints on either end, there is too much play and
-the swashplate lolls about loosely. I solved this by strongly constraining the
-lever side of the control rods - instead of ball joints, I use friction bushings
-to restrict the sideways play of one end of the rods.
-
 
 
 # Appendix: Learning experiences
@@ -283,8 +250,10 @@ I started to investigate the MD 500 series, for which I also found a maintenance
 manual, and whose controls use bellcranks to transform lateral stick motions
 to longitudinal control rod motions to the mixing crank.
 
-Fortunately, I went back and tried again, and replaced the axles with a lift
-arm. The link arm is rigid enough to transmit the lateral motion properly. 
+Fortunately, I went back and tried again, and replaced the axles with lift
+arms. These are rigid enough to transmit the lateral motion, but there is still
+a certain amount of play in the Y-bar, which I suspect is present in the real
+controls too.  
 
 As an aside, I was stumped as to how the cyclic rigging allowed lateral motion,
 [until a nice person on aviation stack exchange helped me
